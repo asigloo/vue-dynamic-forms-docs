@@ -1,0 +1,30 @@
+{
+  "name": "vue-dynamic-forms-docs",
+  "version": "0.0.0-development",
+  "description": "Official Documentation for Vue Dynamic Forms",
+  "main": "index.js",
+  "authors": {
+    "name": "Alvaro Saburido",
+    "email": "alvaro.saburido@gmail.com"
+  },
+  "repository": "https://github.com/asigloo/vue-dynamic-forms-docs/vue-dynamic-forms-docs",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "semantic-release": "semantic-release"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
+    "vuepress": "^1.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "sass-loader": "^10.0.3",
+    "semantic-release": "^17.1.2",
+    "vdf-2": "npm:@asigloo/vue-dynamic-forms@latest",
+    "vdf-3": "npm:@asigloo/vue-dynamic-forms@next",
+    "vue-select": "^3.10.8"
+  }
+}
