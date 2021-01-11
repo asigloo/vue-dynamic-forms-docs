@@ -9,9 +9,13 @@ module.exports = {
     {
       text: 'Guide',
       items: [
-        { text: 'v2.x', link: '/v2/guide/' },
         { text: 'v3.x', link: '/v3/guide/' },
+        { text: 'v2.x', link: '/v2/guide/' },
       ],
+    },
+    {
+      text: 'Migration Guide',
+      link: '/v3/guide/migration-guide',
     },
     {
       text: 'Plugin Repo',
@@ -85,7 +89,13 @@ module.exports = {
         children: [
           ['guide/install', 'Installation'],
           ['guide/usage', 'Usage'],
+          ['guide/migration-guide', 'Migration Guide'],
         ],
+      },
+      {
+        title: 'Theme & Styling',
+        collapsable: true,
+        children: [['guide/theming', 'Theming']],
       },
     ],
     /* '/guide/v2/': [
