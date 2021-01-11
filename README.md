@@ -8,10 +8,8 @@
   <a href="https://www.npmjs.com/package/@asigloo/vue-dynamic-forms">
     <img src="https://badgen.net/npm/v/@asigloo/vue-dynamic-forms" alt="Current npm version">
   </a>
-  <a href="https://www.npmjs.com/package/@asigloo/vue-dynamic-forms/next">
-    <img src="https://badgen.net/npm/v/@asigloo/vue-dynamic-forms/next" alt="Current npm version">
-  </a>
-  <a href="https://app.netlify.com/sites/vue-dynamic-forms/deploys">
+
+  <a href="https://app.netlify.com/sites/vue-dynamic-forms-docs/deploys">
     <img src="https://api.netlify.com/api/v1/badges/5defb6a1-c5fd-4b19-8fd0-a687f26761a6/deploy-status" alt="Current npm version">
   </a>
 </p>

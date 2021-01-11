@@ -7,7 +7,7 @@
     <img src="https://badgen.net/npm/v/@asigloo/vue-dynamic-forms/next" alt="Current npm version">
   </a>
   <a href="https://bundlephobia.com/result?p=@asigloo/vue-dynamic-forms">
-    <img src="https://flat.badgen.net/bundlephobia/min/@asigloo/vue-dynamic-forms@next" alt="Minified size">
+    <img src="https://flat.badgen.net/bundlephobia/min/@asigloo/vue-dynamic-forms" alt="Minified size">
   </a>
   <a href="https://vuejs.org">
     <img src="https://flat.badgen.net/badge/vue.js/3.x.x/4fc08d?icon=github" alt="Vue.js version">
@@ -25,33 +25,33 @@ So, wouldn't it be more economical to create the forms dynamically? Based on met
 
 That's **Vue Dynamic Forms**.
 
-## Status: Beta
+## Status: Stable
 
-This is the Vue `3.x.x` compatible version. The focus right now is out of the box `Typescript` support, three shakeable, improve accesiility and be lighter in size. For Vue `2.x.x` please use the library tags [2.x](https://github.com/alvarosaburido/vue-dynamic-forms/tree/2.x).
+This is the Vue `3.x.x` compatible version. Out of the box `Typescript` support, three shakeable, improved accesiility and be lighter in size. For Vue `2.x.x` please use the library tags [2.x](https://github.com/alvarosaburido/vue-dynamic-forms/tree/2.x).
 
 ## Documentation
 
 Complete documentation and examples available at
 
 - **[Documentation](https://vue-dynamic-forms.netlify.app)**
-- **[Sandbox Demo](https://codesandbox.io/s/vue-dynamic-forms-ftzes)**
+- **[Demos](#demos)**
 - **Migration Guide** (soon)
 
 ## Installation
 
 ```bash
-$ npm install @asigloo/vue-dynamic-forms@next
+$ npm install @asigloo/vue-dynamic-forms
 ```
 
 or if you prefer yarn
 
 ```bash
-$ yarn add @asigloo/vue-dynamic-forms@next
+$ yarn add @asigloo/vue-dynamic-forms
 ```
 
 ## Usage
 
-The installation and usage has change to align with new Vue 3 initialization process.
+The installation and usage has change to align with new Vue 3 plugin process.
 
 To create a new `Dynamic Form` instance, use the `createDynamicForms` function;
 
@@ -59,9 +59,145 @@ To create a new `Dynamic Form` instance, use the `createDynamicForms` function;
 import { createApp } from 'vue';
 import { createDynamicForms } from '@asigloo/vue-dynamic-forms';
 
-const VueDynamicForms = createDynamicForms({});
+const VueDynamicForms = createDynamicForms();
 
 export const app = createApp(App);
 
 app.use(VueDynamicForms);
 ```
+
+In your component:
+
+```vue
+<template>
+  <dynamic-form :form="form" @change="valueChanged" />
+</template>
+
+<script lang="ts">
+import { computed, defineComponent, reactive } from 'vue';
+
+import {
+  CheckboxField,
+  TextField,
+  SelectField,
+} from '@asigloo/vue-dynamic-forms';
+
+export default defineComponent({
+  name: 'BasicDemo',
+  setup() {
+    const form = computed(() => ({
+      id: 'basic-demo',
+      fields: {
+        username: TextField({
+          label: 'Username',
+        }),
+        games: SelectField({
+          label: 'Games',
+          options: [
+            {
+              value: 'the-last-of-us',
+              label: 'The Last of Us II',
+            },
+            {
+              value: 'death-stranding',
+              label: 'Death Stranding',
+            },
+            {
+              value: 'nier-automata',
+              label: 'Nier Automata',
+            },
+          ],
+        }),
+        checkIfAwesome: CheckboxField({
+          label: 'Remember Me',
+        }),
+      },
+    }));
+
+    function valueChanged(values) {
+      console.log('Values', values);
+    }
+
+    return {
+      form,
+      valueChanged,
+    };
+  },
+});
+</script>
+```
+
+## Demos
+
+![Vue Dynamic Forms Demo](https://res.cloudinary.com/alvarosaburido/image/upload/v1610265908/vue-dynamic-forms-demo.png)
+
+We've prepared some demos to show different use cases of the library and how to use each type of input field.
+
+To check them just run the command bellow which run the app at `http://localhost:6044/`
+
+```
+yarn run serve
+```
+
+- [x] General Form
+- [x] Text Fields
+- [x] Number Fields
+- [x] Select Fields
+- [x] Textarea Fields
+- [x] Radio Fields
+- [x] Login
+- [x] Custom Fields
+- [ ] Axios form (Retrieve form structure from an API)
+- [ ] TailwindCSS styling
+
+## Development
+
+### Project setup
+
+```
+yarn install
+```
+
+### Compiles and hot-reloads
+
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+
+```
+yarn run build
+```
+
+### Generate types
+
+```
+yarn run build:dts
+```
+
+### Lints and fixes files
+
+```
+yarn run lint
+```
+
+### Run your unit tests
+
+```
+yarn run test
+```
+
+### Run your e2e tests
+
+```
+yarn run test
+```
+
+## Contributing
+
+If you find this library useful and you want to help improve it, maintain it or just want a new feature, feel free to contact me, or feel free to do a PR 😁.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

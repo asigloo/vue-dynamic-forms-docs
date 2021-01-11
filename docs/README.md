@@ -3,7 +3,7 @@ home: true
 heroImage: https://res.cloudinary.com/alvarosaburido/image/upload/v1589993773/portfolio/web/vue-dynamic-forms/open-graph-preview_kv4glm.png
 tagline: 📑 Official Documentation for Vue Dynamic Forms
 actionText: Quick Start →
-actionLink: /v2/guide/
+actionLink: /v3/guide/
 features:
   - title: Magical 🧞‍♂️✨
     details: Generating forms quickly from a simple data object, a JSON string or the response from an ajax call using only a DynamicForm component, yup, that easily.
