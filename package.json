@@ -19,11 +19,11 @@
     "@vuepress/plugin-medium-zoom": "^1.8.0",
     "node-sass": "^5.0.0",
     "vuepress": "^1.8.0",
-    "bootstrap": "^4.5.2",
-    "sass-loader": "^10.1.0",
-    "semantic-release": "^17.1.2",
+    "bootstrap": "^4.6.0",
+    "sass-loader": "^10.1.1",
+    "semantic-release": "^17.3.6",
     "vdf-2": "npm:@asigloo/vue-dynamic-forms@2.0.1",
     "vdf-3": "npm:@asigloo/vue-dynamic-forms",
-    "vue-select": "^3.10.8"
+    "vue-select": "^3.11.2"
   }
 }

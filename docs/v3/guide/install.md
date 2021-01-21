@@ -11,7 +11,7 @@ npm install @asigloo/vue-dynamic-forms@next --S
 
 ## Initialization
 
-The installation and usage has change to align with new Vue 3 initialization process.
+The installation and usage have changed to align with the new Vue 3 initialization process.
 
 To create a new Dynamic Form instance, use the createDynamicForms function;
 

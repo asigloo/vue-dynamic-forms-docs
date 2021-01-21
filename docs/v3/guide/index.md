@@ -51,7 +51,7 @@ $ yarn add @asigloo/vue-dynamic-forms
 
 ## Usage
 
-The installation and usage has change to align with new Vue 3 plugin process.
+The installation and usage have changed to align with the new Vue 3 initialization process.
 
 To create a new `Dynamic Form` instance, use the `createDynamicForms` function;
 
