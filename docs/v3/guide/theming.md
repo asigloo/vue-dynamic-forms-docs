@@ -6,7 +6,7 @@ The components are unstyled by default, so you can customize them with your own 
 
 More themes are in progress.
 
-## Defaul Theme
+## Default Theme
 
 Similar to default bootstrap theme for forms.
 
